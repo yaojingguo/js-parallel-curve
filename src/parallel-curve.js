@@ -135,7 +135,8 @@ var ParallelCurve = {
 			return points;
 		}
 		var toRemove = [];
-		for ( var i = 3; i < points.length; i++) {
+    // Current iteration is a1 a2 b1 b2. Next iteration should be b1 b2 c1 c2.
+		for ( var i = 3; i < points.length; i += 2) {
 			var a1 = points[i - 3];
 			var a2 = points[i - 2];
 			var b1 = points[i - 1];
